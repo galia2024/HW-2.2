@@ -1,0 +1,54 @@
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    margin: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid #000; /* Example border, you can customize */
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Example background color, you can customize */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-item img {
+    width: 75%;
+}
+
+
+@keyframes border-color-change {
+    from { border-color: #000; } 
+    to { border-color: #ff0000; } 
+}
+
+
+@keyframes width-change {
+    from { width: 75%; }
+    to { width: 50%; } 
+}
+
+
+@keyframes text-color-change {
+    from { color: #000; }
+    to { color: #00ff00; }
+}
+
+/* Apply animations */
+.flex-item img:first-of-type {
+    animation: border-color-change 2s infinite;
+    border: 2px solid #000000;
+
+.flex-item:nth-of-type(2) img {
+    animation: width-change 3s 3s infinite;
+}
+
+.flex-item p:first-of-type {
+    animation: text-color-change 4s infinite alternate;
+}
